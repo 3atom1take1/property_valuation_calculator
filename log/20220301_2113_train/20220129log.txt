@@ -1,0 +1,145 @@
+processing_start_time:2022-03-01 21:13:43
+train_data_date:20220129
+do_grid_search:False
+train_data_shape:(21177, 1681)
+[lr result]
+y_test_describe:
+count    3.836000e+03
+mean     4.759954e+07
+std      2.035278e+07
+min      4.800000e+06
+25%      3.280000e+07
+50%      4.480000e+07
+75%      5.980000e+07
+max      9.980000e+07
+Name: price, dtype: float64
+train_RMSE:5992689.250589091
+test_RMSE:526807239031915.0
+train_MAPE11.288612294320927
+test_MAPE90892191.71600002
+intercept:5.009789267216857e+17
+                    Name  Coefficients
+1209       ownership_所有権  1.946870e+16
+1208       ownership_地上権  1.946870e+16
+1210       ownership_賃借権  1.946870e+16
+1207   ownership_一般定期賃借権  1.946870e+16
+1448          station_有明  1.578885e+16
+1449     station_有明テニスの森  1.578885e+16
+1345       station_国際展示場  1.578885e+16
+1637        station_足立小台  4.686723e+15
+80        adress_世田谷区桜丘－  2.706036e+15
+95    adress_世田谷区玉川田園調布－  2.060453e+15
+                  Name  Coefficients
+18  floor_plan_2LLDDKK -2.386047e+17
+22  floor_plan_3LLDDKK -2.386047e+17
+29  floor_plan_6LLDDKK -2.386047e+17
+27     floor_plan_5LDK -2.386047e+17
+25       floor_plan_4K -2.386047e+17
+28     floor_plan_6LDK -2.386047e+17
+10       floor_plan_1K -2.386047e+17
+31    floor_plan_ワンルーム -2.386047e+17
+26     floor_plan_4LDK -2.386047e+17
+9       floor_plan_1DK -2.386047e+17training lr done.[lasso result]
+y_test_describe:
+count    3.836000e+03
+mean     4.759954e+07
+std      2.035278e+07
+min      4.800000e+06
+25%      3.280000e+07
+50%      4.480000e+07
+75%      5.980000e+07
+max      9.980000e+07
+Name: price, dtype: float64
+train_RMSE:5992944.03705408
+test_RMSE:6948178.546401734
+train_MAPE11.290416380510768
+test_MAPE13.069658018203706
+intercept:20636865.679403465
+                Name  Coefficients
+227   adress_千代田区一番町  3.649197e+07
+910    adress_港区西新橋－  3.628080e+07
+909     adress_港区西新橋  3.619088e+07
+899     adress_港区白金－  3.533044e+07
+918   adress_港区麻布十番－  2.984767e+07
+568    adress_新宿区箪笥町  2.937409e+07
+1361     station_大手町  2.866794e+07
+906     adress_港区虎ノ門  2.802676e+07
+405    adress_大田区北嶺町  2.773055e+07
+1088   adress_豊島区巣鴨－  2.738851e+07
+                    Name  Coefficients
+18    floor_plan_2LLDDKK -4.348736e+07
+727       adress_江戸川区上一色 -3.475434e+07
+1146     adress_足立区古千谷本町 -3.330735e+07
+1180       adress_足立区興野－ -3.311563e+07
+738        adress_江戸川区大杉 -3.209281e+07
+22    floor_plan_3LLDDKK -3.166719e+07
+1395         station_御嶽山 -3.161212e+07
+29    floor_plan_6LLDDKK -3.094527e+07
+213       adress_北区田端新町ー -2.946276e+07
+733      adress_江戸川区北小岩－ -2.858138e+07training lasso done.[ridge result]
+y_test_describe:
+count    3.836000e+03
+mean     4.759954e+07
+std      2.035278e+07
+min      4.800000e+06
+25%      3.280000e+07
+50%      4.480000e+07
+75%      5.980000e+07
+max      9.980000e+07
+Name: price, dtype: float64
+train_RMSE:6085627.381579991
+test_RMSE:6817066.759585057
+train_MAPE11.540457300579037
+test_MAPE12.766567521489074
+intercept:14429255.003836036
+                Name  Coefficients
+1601     station_表参道  2.551453e+07
+1635     station_赤羽橋  2.447545e+07
+909     adress_港区西新橋  2.263442e+07
+1273     station_九段下  2.217617e+07
+1392      station_広尾  2.215308e+07
+1402     station_恵比寿  2.177002e+07
+227   adress_千代田区一番町  2.060812e+07
+888     adress_港区東新橋  1.925565e+07
+1599     station_虎ノ門  1.874179e+07
+1656   station_青山一丁目  1.858383e+07
+                    Name  Coefficients
+1501          station_江北 -2.055856e+07
+1625         station_谷在家 -1.980598e+07
+1488          station_梅島 -1.861646e+07
+1669         station_高島平 -1.764408e+07
+1644          station_金町 -1.748669e+07
+18    floor_plan_2LLDDKK -1.734205e+07
+1560         station_竹ノ塚 -1.706815e+07
+1611      station_西新井大師西 -1.644832e+07
+1481          station_柴又 -1.636652e+07
+727       adress_江戸川区上一色 -1.635973e+07training ridge done.[lgb result]
+y_test_describe:
+count    3.836000e+03
+mean     4.759954e+07
+std      2.035278e+07
+min      4.800000e+06
+25%      3.280000e+07
+50%      4.480000e+07
+75%      5.980000e+07
+max      9.980000e+07
+Name: price, dtype: float64
+train_RMSE:5270580.749597563
+test_RMSE:6655410.7546447795
+train_MAPE9.224684894163461
+test_MAPE11.056987291667332training lgb done.[ensemble result]
+y_test_describe:
+count    3.836000e+03
+mean     4.759954e+07
+std      2.035278e+07
+min      4.800000e+06
+25%      3.280000e+07
+50%      4.480000e+07
+75%      5.980000e+07
+max      9.980000e+07
+Name: price, dtype: float64
+train_RMSE:3176221.8475865703
+test_RMSE:4931204.641193221
+train_MAPE5.68166234273496
+test_MAPE7.847853543923403training ensemble done.end_time:2022-03-01 21:19:56.543950
+processing_time:0:06:13.239315
