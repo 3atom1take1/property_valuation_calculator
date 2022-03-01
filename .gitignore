@@ -1,0 +1,5 @@
+*.csv
+scraping_raw/
+train_data/
+*.out
+*.ipynb
