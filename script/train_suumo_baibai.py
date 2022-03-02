@@ -42,7 +42,7 @@ upper_price = settings['upper_price']
 do_grid_search = settings['do_grid_search']
 
 files = glob.glob(work_dir + '/scraping_raw/suumo_baibai*.csv')
-input_file = files[0]
+input_file = files[-1]
 
 train_data_date = input_file[-12:-4]
 log_dir = work_dir + '/log/{now_time}_train/'.format(
@@ -70,6 +70,9 @@ text = 'train_data_date:' + str(train_data_date) + '\n'
 write_log(log_file, text)
 
 text = 'do_grid_search:' + str(do_grid_search) + '\n'
+write_log(log_file, text)
+
+text = 'input_file:' + str(input_file) + '\n'
 write_log(log_file, text)
 
 
@@ -267,23 +270,21 @@ def preprocessing():
         temp_use_district.append(temp_ud_value)
     df_raw['use_district'] = temp_use_district
     df_raw['use_district'] = df_raw['use_district'].str.replace('-', '不明')
-
+    df_raw = df_raw[['mansion_name','price', 'floor_plan', 'total_rooms', 'exclusive_area'
+                    ,'other_area','stories', 'adress', 'move_in_date', 'direction', 'reform'
+                    ,'ownership', 'use_district', 'service_room', 'age', 'station'
+                    ,'from_station','url','log_date']]
+    df_raw.to_csv(work_dir +
+              '/train_data/baibai_train_{}.csv'.format(train_data_date),
+              index=False)
     df = df_raw[[
         'price', 'floor_plan', 'total_rooms', 'exclusive_area', 'other_area',
         'stories', 'adress', 'move_in_date', 'direction', 'reform',
         'ownership', 'use_district', 'service_room', 'age', 'station',
         'from_station'
     ]]
-
-    df = pd.get_dummies(df)
-
-    df.to_csv(work_dir +
-              '/train_data/baibai_train_{}.csv'.format(train_data_date),
-              index=False)
-
     text = 'train_data_shape:' + str(df.shape) + '\n'
     write_log(log_file, text)
-
 
 # 市場価格と予測価格
 def result_plot(y_train, y_train_pred, y_test, y_test_pred, model_type):
@@ -349,8 +350,10 @@ def save_model(model, model_type):
 
 def main():
     preprocessing()
-    df_train_raw = pd.read_csv(
-        work_dir + '/train_data/baibai_train_{}.csv'.format(train_data_date))
+    files = glob.glob(work_dir + '/train_data/baibai_train_*.csv')
+    input_file = files[-1]
+    df_train_raw = pd.read_csv(input_file)
+    df_train_raw = pd.get_dummies(df_train_raw)
     df_train_raw = df_train_raw[df_train_raw['price'] < 100000000]
 
     # 目的変数の設定
@@ -382,7 +385,7 @@ def main():
         "Name": X_train.columns,
         "Coefficients": lr_model.coef_
     }).sort_values(by='Coefficients')
-    text = '[{} result]\ny_test_describe:\n'.format(model_type) + str(
+    text = '\n\n[{} result]\ny_test_describe:\n'.format(model_type) + str(
         y_test.describe(
         )) + '\n' + 'train_RMSE:' + str(train_rmse) + '\ntest_RMSE:' + str(
             test_rmse) + '\ntrain_MAPE' + str(
@@ -398,7 +401,7 @@ def main():
     write_log(log_file, text)
     result_plot(y_train, y_train_pred, y_test, y_test_pred, model_type)
     save_model(lr_model, model_type)
-    text = 'training {} done.'.format(model_type)
+    text = '\ntraining {} done.\n'.format(model_type)
     write_log(log_file, text)
 
     # Lasso回帰
@@ -414,7 +417,7 @@ def main():
         "Name": X_train.columns,
         "Coefficients": lasso_model.coef_
     }).sort_values(by='Coefficients')
-    text = '[{} result]\ny_test_describe:\n'.format(model_type) + str(
+    text = '\n\n[{} result]\ny_test_describe:\n'.format(model_type) + str(
         y_test.describe()
     ) + '\n' + 'train_RMSE:' + str(train_rmse) + '\ntest_RMSE:' + str(
         test_rmse) + '\ntrain_MAPE' + str(
@@ -430,7 +433,7 @@ def main():
     write_log(log_file, text)
     result_plot(y_train, y_train_pred, y_test, y_test_pred, model_type)
     save_model(lasso_model, model_type)
-    text = 'training {} done.'.format(model_type)
+    text = '\ntraining {} done.\n'.format(model_type)
     write_log(log_file, text)
 
     # Ridge回帰
@@ -447,7 +450,7 @@ def main():
         "Name": X_train.columns,
         "Coefficients": ridge_model.coef_
     }).sort_values(by='Coefficients')
-    text = '[{} result]\ny_test_describe:\n'.format(model_type) + str(
+    text = '\n\n[{} result]\ny_test_describe:\n'.format(model_type) + str(
         y_test.describe()
     ) + '\n' + 'train_RMSE:' + str(train_rmse) + '\ntest_RMSE:' + str(
         test_rmse) + '\ntrain_MAPE' + str(
@@ -463,7 +466,7 @@ def main():
     write_log(log_file, text)
     result_plot(y_train, y_train_pred, y_test, y_test_pred, model_type)
     save_model(ridge_model, model_type)
-    text = 'training {} done.'.format(model_type)
+    text = '\ntraining {} done.\n'.format(model_type)
     write_log(log_file, text)
 
     # LightGBM
@@ -525,7 +528,7 @@ def main():
 
     train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
     test_rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))
-    text = '[{} result]\ny_test_describe:\n'.format(model_type) + str(
+    text = '\n\n[{} result]\ny_test_describe:\n'.format(model_type) + str(
         y_test.describe(
         )) + '\n' + 'train_RMSE:' + str(train_rmse) + '\ntest_RMSE:' + str(
             test_rmse) + '\ntrain_MAPE' + str(
@@ -549,7 +552,7 @@ def main():
     plt.savefig(shap_summary_file)
 
     save_model(lgb_model, model_type)
-    text = 'training {} done.'.format(model_type)
+    text = '\ntraining {} done.\n'.format(model_type)
     write_log(log_file, text)
 
     # Ensemble model
@@ -577,18 +580,18 @@ def main():
 
     train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
     test_rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))
-    text = '[{} result]\ny_test_describe:\n'.format(model_type) + str(
+    text = '\n\n[{} result]\ny_test_describe:\n'.format(model_type) + str(
         y_test.describe(
         )) + '\n' + 'train_RMSE:' + str(train_rmse) + '\ntest_RMSE:' + str(
             test_rmse) + '\ntrain_MAPE' + str(
                 mean_absolute_percentage_error(
-                    y_train, y_train_pred)) + '\ntest_MAPE' + str(
+                    y_train, y_train_pred)) + '\ntest_MAPE\n' + str(
                         mean_absolute_percentage_error(y_test, y_test_pred))
     write_log(log_file, text)
     result_plot(y_train, y_train_pred, y_test, y_test_pred, model_type)
 
     save_model(ensemble_model, model_type)
-    text = 'training {} done.'.format(model_type)
+    text = '\ntraining {} done.\n'.format(model_type)
     write_log(log_file, text)
 
     end_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
