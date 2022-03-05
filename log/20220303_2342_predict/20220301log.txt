@@ -1,0 +1,21 @@
+processing_start_time:2022-03-03 23:42:29
+train_data_date:20220301
+mansion_name:ザ・パークハウス西新宿タワー60
+adress:新宿区西新宿
+station:西新宿五丁目
+from_station:7
+floor_plan:1LDK
+exclusive_area:60
+age:5
+stories:3
+direction:南西
+other_area:13
+predict_room
+       mansion_name  price floor_plan  total_rooms  exclusive_area  ...  age  station from_station  url  log_date
+0  ザ・パークハウス西新宿タワー60      0       1LDK          972              60  ...    5   西新宿五丁目            7  aaa  20220129
+
+[1 rows x 19 columns]
+model_file:/home/ec2-user/property_valuation_calculator/model/20220302/ensemble_20220301.pickle
+predicting done.
+end_time:2022-03-03 23:42:29.491084
+processing_time:0:00:00.266207

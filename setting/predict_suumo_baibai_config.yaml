@@ -1,19 +1,19 @@
-mansion_name: 'クレヴィア東陽町'
+mansion_name: 'ザ・パークハウス西新宿タワー60'    #物件名
 price: 0
-adress: '江東区南砂'
-station: '東陽町'
-from_station: 3
-floor_plan: '1LDK'
-exclusive_area: 32
-age: 11
-stories: 5
-direction: '東'
-other_area: 5
-total_rooms: 72
-move_in_date: 0
-reform: 0
-ownership: '所有権'
-use_district: '準住居'
+adress: '新宿区西新宿'    # 住所
+station: '西新宿五丁目'   # 最寄り駅
+from_station: 7   # 最寄り駅からの徒歩分数
+floor_plan: '1LDK'    # 間取り
+exclusive_area: 60    # 専有面積
+age: 5   # 築年数
+stories: 3    # 所在階
+direction: '南西'   # 向き
+other_area: 13   # バルコニー面積
+total_rooms: 972   # 総戸数
+move_in_date: 0   # 即入居可
+reform: 0   # リフォーム済み
+ownership: '所有権'   # 所有権：所有権 / 賃借権 / 地上権 / 一般定期賃借権
+use_district: '２種住居'    # 用途区域：不明 / 商業 / 準工業 / １種住居 / １種中高 / 近隣商業 / ２種住居 / １種低層 / ２種中高 / 工業 / 準住居 / 無指定 / ２種低層 / 市街化調整区域 / 都市計画区域外
+service_room: 0   # サービスルーム数
 url: 'aaa'
 log_date: 20220129
-service_room: 0
