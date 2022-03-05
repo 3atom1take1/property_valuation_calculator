@@ -84,8 +84,8 @@ write_log(log_file, text)
 text = 'train_data_date:' + str(train_data_date) + '\n'
 write_log(log_file, text)
 
-text = 'mansion_name:' + str(mansion_name) + '\n' + 'adress:' + str(adress) + '\n' + 'station:' + str(station) + '\n' + 'from_station:' + str(from_station) + '\n' + 'floor_plan:' + str(floor_plan) + '\n' + 'exclusive_area:' + str(exclusive_area) + '\n' + 'age:' + str(age) + '\n' + 'stories:' + str(stories) + '\n' + 'direction:' + str(direction) + '\n' + 'other_area:' + str(other_area) + '\n'
-write_log(log_file, text)
+# text = 'mansion_name:' + str(mansion_name) + '\n' + 'adress:' + str(adress) + '\n' + 'station:' + str(station) + '\n' + 'from_station:' + str(from_station) + '\n' + 'floor_plan:' + str(floor_plan) + '\n' + 'exclusive_area:' + str(exclusive_area) + '\n' + 'age:' + str(age) + '\n' + 'stories:' + str(stories) + '\n' + 'direction:' + str(direction) + '\n' + 'other_area:' + str(other_area) + '\n'
+# write_log(log_file, text)
 
 def main():
     # target_room = {}
@@ -116,7 +116,7 @@ def main():
     # trainデータの読み込み
     df_raw = pd.read_csv(input_file)
     # df_raw = df_raw.append(df_target_room)
-    text = 'shape:' + str(df_raw.shape + '\n'
+    text = 'shape:' + str(df_raw.shape) + '\n'
     write_log(log_file, text)
     df = df_raw[[
         'price', 'floor_plan', 'total_rooms', 'exclusive_area', 'other_area',
@@ -127,8 +127,8 @@ def main():
     df = pd.get_dummies(df)
     # 目的変数の設定
     target_column = 'price'
-    X_test = df_target.drop(columns = target_column)
-    y_test = df_target[target_column]
+    X_test = df.drop(columns = target_column)
+    y_test = df[target_column]
 
     #　モデルの読み込み
     files = glob.glob(work_dir + '/model/*/ensemble_*.pickle')
@@ -140,7 +140,31 @@ def main():
     # 価格予測
     y_test_pred = model.predict(X_test.values)
     df_raw['pred_price'] = y_test_pred
-    df_raw.to_csv(work_dir + '/pred_output/{}'.format(excution_date))
+    df_raw['real_per_pred'] = df_raw['price'] / df_raw['pred_price'] - 1.0
+    df_raw = df_raw[['mansion_name'
+                    ,'url'
+                    ,'price'
+                    ,'pred_price'
+                    ,'real_per_pred'
+                    ,'station'
+                    ,'from_station'
+                    ,'adress'
+                    ,'age'
+                    ,'floor_plan'
+                    ,'exclusive_area'
+                    ,'stories'
+                    ,'direction'
+                    ,'total_rooms'
+                    ,'other_area'
+                    ,'reform'
+                    ,'ownership'
+                    ,'use_district'
+                    ,'move_in_date'
+                    ,'service_room'
+                    ,'log_date']]
+    df_raw = df_raw.query('10000000 <= price <= 40000000 & real_per_pred < -0.2 & exclusive_area < 50 & stories >= 2 & ownership =="所有権" &from_station < 10 ')
+    df_raw = df_raw.sort_values('real_per_pred')
+    df_raw.to_csv(work_dir + '/pred_output/pred_output_{}.csv'.format(excution_date),index = False)
 
     end_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
     text = 'predicting done.\nend_time:{}\n'.format(end_time)
