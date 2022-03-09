@@ -1,3 +1,0 @@
-python3 /Users/satomitakei/property_valuation_calculator/script/suumo_baibai_scraping.py
-
-python3 /Users/satomitakei/property_valuation_calculator/script/suumo_chintai_scraping.py

@@ -10,51 +10,41 @@ from tqdm import tqdm
 # from logging import getLogger, StreamHandler, Formatter, FileHandler, DEBUG
 import yaml
 import os
-import retry
+from retry import retry
 
 work_dir = os.getcwd()
 with open(work_dir + '/setting/scraping_config.yaml', 'r') as yml:
     config = yaml.safe_load(yml)
 base_url = config['baibai_base_url']
 
-diff_jst_from_utc = 9
+def write_log(log_file, text):
+    f = open(log_file, 'a', encoding='UTF-8')
+    f.write(text)
+    f.close()
+    print(text)
+
+diff_jst_from_utc = 0
 start_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
+now_time = (dt.datetime.now() +
+            dt.timedelta(hours=diff_jst_from_utc)).strftime('%Y%m%d_%H%M')
+
+log_dir = work_dir + '/log/{now_time}_scraping/'.format(now_time=now_time)
+os.makedirs(log_dir, exist_ok=True)
+log_file = log_dir + '/{}log.txt'.format(now_time)
+f = open(log_file, 'w', encoding='UTF-8')
+f.close()
+
+text = 'processing_start_time:' + str(start_time.replace(microsecond=0)) + '\n'
+write_log(log_file, text)
+excution_date = dt.datetime.today().strftime('%Y%m%d')
 
 file_name = 'suumo_baibai'
 excution_date = dt.datetime.today().strftime('%Y%m%d')
 
 # base_url = "https://suumo.jp/jj/bukken/ichiran/JJ010FJ001/?ar=030&bs=011&ta=13&jspIdFlg=patternShikugun&sc=13101&sc=13102&sc=13103&sc=13104&sc=13105&sc=13113&sc=13106&sc=13107&sc=13108&sc=13118&sc=13121&sc=13122&sc=13123&sc=13109&sc=13110&sc=13111&sc=13112&sc=13114&sc=13115&sc=13120&sc=13116&sc=13117&sc=13119&kb=1&kt=9999999&mb=0&mt=9999999&ekTjCd=&ekTjNm=&tj=0&cnb=0&cn=9999999&srch_navi=1&pn={}"
 
-# def setup_logger(log_folder, modname=__name__):
-#     logger = getLogger(modname)
-#     logger.setLevel(DEBUG)
-
-#     sh = StreamHandler()
-#     sh.setLevel(DEBUG)
-#     formatter = Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-#     sh.setFormatter(formatter)
-#     logger.addHandler(sh)
-
-#     fh = FileHandler(log_folder) #fh = file handler
-#     fh.setLevel(DEBUG)
-#     fh_formatter = Formatter('%(asctime)s - %(filename)s - %(name)s - %(lineno)d - %(levelname)s - %(message)s')
-#     fh.setFormatter(fh_formatter)
-#     logger.addHandler(fh)
-#     return logger
-
-# # 保存するファイル名を指定
-# log_folder = work_dir+'log/'+file_name+'_{}.log'.format(excution_date)
-
-# # ログの初期設定を行う
-# logger = setup_logger(log_folder)
-
-# # ログを出力(debugレベル）
-# logger.debug('processing start:',start_time)
-
-
-# @retry(tries=3, delay=10, backoff=2)
+@retry(tries=3, delay=10, backoff=2)
 def main():
-    print('start_time:'+str(start_time))
     def get_html(url):
         r = requests.get(url)
         soup = BeautifulSoup(r.content, "html.parser")
@@ -71,7 +61,9 @@ def main():
 
     # extract all items
     max_page = int(item.find("ol",{"class": "pagination-parts"}).findAll('a')[4].getText().strip())
-    print("max_page", max_page, "items", len(item))
+    text = "max_page:{max_page} \n items:{len_item}".format(max_page=max_page
+                                                            ,len_item =  len(item))
+    write_log(log_file,text)
 
     url_list = []
     all_data = []
@@ -117,15 +109,17 @@ def main():
     df = pd.DataFrame(all_data)
     df.to_csv(work_dir+'/scraping_raw/suumo_baibai_{excution_date}.csv'.format(excution_date=excution_date)
             ,index = False)
-    print('record_volume:'+str(df.shape))
-    end_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
-    print('end_time:'+str(end_time))
-    print('processing_time:'+str(end_time - start_time))
     
-    # logger.debug('success & error:', len(error_page),'/',df.shape[0]+len(error_page))
-    # logger.debug('processing start:',start_time)
-    # logger.debug('end time:',end_time)
-    # logger.debug('processing time：',end_time - start_time)
+    text = 'df_shape:{}\n'.format(df.shape)
+    write_log(log_file,text)
+
+    end_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
+    text = 'predicting done.\nend_time:{}\n'.format(end_time)
+    write_log(log_file,text)
+
+    processing_time = end_time - start_time
+    text = 'processing_time:{}\n'.format(processing_time)
+    write_log(log_file,text)
 
 if __name__ == '__main__':
     main()
