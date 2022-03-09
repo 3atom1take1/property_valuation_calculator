@@ -44,6 +44,11 @@ work_dir = os.getcwd()
 log_dir = work_dir + '/log/{now_time}_predict/'.format(now_time=now_time)
 os.makedirs(log_dir, exist_ok=True)
 
+with open(work_dir + '/setting/predict_resonable_price.yaml', 'r') as yml:
+    config = yaml.safe_load(yml)
+conditions = config['conditions']
+
+
 # trainデータの読み込み
 files = glob.glob(work_dir + '/train_data/baibai_train*.csv')
 input_file = files[-1]
@@ -162,7 +167,7 @@ def main():
                     ,'move_in_date'
                     ,'service_room'
                     ,'log_date']]
-    df_raw = df_raw.query('10000000 <= price <= 40000000 & real_per_pred < -0.2 & exclusive_area < 50 & stories >= 2 & ownership =="所有権" &from_station < 10 ')
+    df_raw = df_raw.query('{}'.format(conditions))
     df_raw = df_raw.sort_values('real_per_pred')
     df_raw.to_csv(work_dir + '/pred_output/pred_output_{}.csv'.format(excution_date),index = False)
 

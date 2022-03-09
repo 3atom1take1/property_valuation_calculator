@@ -45,7 +45,7 @@ files = glob.glob(work_dir + '/scraping_raw/suumo_baibai*.csv')
 input_file = files[-1]
 
 train_data_date = input_file[-12:-4]
-log_dir = work_dir + '/log/{now_time}_train/'.format(
+log_dir = work_dir + '/log/{now_time}_train_all/'.format(
     now_time=now_time, train_data_date=train_data_date)
 
 os.makedirs(log_dir, exist_ok=True)
@@ -277,14 +277,13 @@ def preprocessing():
     df_raw.to_csv(work_dir +
               '/train_data/baibai_train_{}.csv'.format(train_data_date),
               index=False)
-    df = df_raw[[
-        'price', 'floor_plan', 'total_rooms', 'exclusive_area', 'other_area',
-        'stories', 'adress', 'move_in_date', 'direction', 'reform',
-        'ownership', 'use_district', 'service_room', 'age', 'station',
-        'from_station'
-    ]]
-    text = 'train_data_shape:' + str(df.shape) + '\n'
+    df_train_raw = df_raw[['price', 'floor_plan', 'total_rooms', 'exclusive_area', 'other_area',
+                            'stories', 'adress', 'move_in_date', 'direction', 'reform',
+                            'ownership', 'use_district', 'service_room', 'age', 'station',
+                            'from_station']]
+    text = 'train_data_shape:' + str(df_train_raw.shape) + '\n'
     write_log(log_file, text)
+    return df_train_raw
 
 # 市場価格と予測価格
 def result_plot(y_train, y_train_pred, y_test, y_test_pred, model_type):
@@ -349,10 +348,11 @@ def save_model(model, model_type):
 
 
 def main():
-    preprocessing()
-    files = glob.glob(work_dir + '/train_data/baibai_train_*.csv')
-    input_file = files[-1]
-    df_train_raw = pd.read_csv(input_file)
+    df_train_raw = preprocessing()
+    # files = glob.glob(work_dir + '/train_data/baibai_train_*.csv')
+    # input_file = files[-1]
+    # df_train_raw = pd.read_csv(input_file)
+    
     df_train_raw = pd.get_dummies(df_train_raw)
     df_train = df_train_raw[df_train_raw['price'] < 100000000]
 

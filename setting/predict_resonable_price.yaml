@@ -1,0 +1,1 @@
+conditions: '10000000 <= price <= 40000000 & real_per_pred < -0.2 & exclusive_area < 50 & stories >= 2 & ownership =="所有権" &from_station < 10'
