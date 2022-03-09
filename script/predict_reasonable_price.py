@@ -82,7 +82,6 @@ f.close()
 # log_date = config['log_date']
 # service_room = config['service_room']
 
-
 text = 'processing_start_time:' + str(start_time.replace(microsecond=0)) + '\n'
 write_log(log_file, text)
 
