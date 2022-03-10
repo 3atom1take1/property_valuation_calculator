@@ -2,8 +2,8 @@
 Calculate apartment value with machine learning.
 
 ## What can I do?
-- scrape apartment data from a Japanese popular real estate website.
-- training valuation calculator model with regression and gradient boosting model
+- scrape apartment data from a Japanese popular real estate website
+- training valuation calculator model with linear regression and gradient boosting model
 - calculate the valuation of an apartment which you select
 
 ## Requirements
