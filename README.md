@@ -27,6 +27,5 @@ pip install mlxtend
 ```
 
 ## Licence
-Copyright (c) 2022 Satomi Takei (Legit Whiz)
+Copyright (c) 2022 Satomi Takei
 This software is released under the MIT License, see LICENSE, see LICENSE.
-This website content is released under the CC BY 4.0 License, see LICENSE.
