@@ -1,5 +1,4 @@
-Property valuation calculator
-
+# Property valuation calculator
 Calculate apartment value with machine learning.
 
 ## What can I do?
