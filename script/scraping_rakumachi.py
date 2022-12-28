@@ -14,15 +14,15 @@ from retry import retry
 import sys
 
 work_dir = os.getcwd()
-with open(work_dir + '/setting/scraping_config.yaml', 'r') as yml:
+with open(work_dir + '/setting/suumo_scraping_config.yaml', 'r') as yml:
     config = yaml.safe_load(yml)
 area_name = sys.argv[1]
 if area_name == 'tokyo':
-    base_url = config['baibai_base_url_tokyo']
+    base_url = config['base_url_tokyo']
 elif area_name == 'osaka':
-    base_url = config['baibai_base_url_osaka']
+    base_url = config['base_url_osaka']
 elif area_name == 'fukuoka':
-    base_url = config['baibai_base_url_fukuoka']
+    base_url = config['base_url_fukuoka']
 
 def write_log(log_file, text):
     f = open(log_file, 'a', encoding='UTF-8')
