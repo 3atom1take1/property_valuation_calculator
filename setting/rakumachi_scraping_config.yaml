@@ -1,0 +1,6 @@
+
+base_url_tokyo: "https://www.rakumachi.jp/syuuekibukken/area/prefecture/dimAll/?page={}&pref=13&gross_from=&price_to=&dim[]=2001&sort=property_created_at&sort_type=desc"
+
+base_url_osaka: "https://www.rakumachi.jp/syuuekibukken/area/prefecture/dimAll/?page={}&pref=27&gross_from=&price_to=&dim[]=2001&sort=property_created_at&sort_type=desc"
+
+base_url_fukuoka: "https://www.rakumachi.jp/syuuekibukken/area/prefecture/dimAll/?page={}&pref=40&gross_from=&price_to=&dim[]=2001&sort=property_created_at&sort_type=desc"

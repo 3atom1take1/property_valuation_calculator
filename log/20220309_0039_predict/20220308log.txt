@@ -1,7 +1,0 @@
-processing_start_time:2022-03-09 00:39:09
-train_data_date:20220308
-shape:(21197, 19)
-model_file:/home/ec2-user/property_valuation_calculator/model/20220309/ensemble_20220308.pickle
-predicting done.
-end_time:2022-03-09 00:39:10.497592
-processing_time:0:00:01.245431

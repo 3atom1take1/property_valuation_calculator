@@ -1,0 +1,6 @@
+processing_start_time:2023-01-12 18:31:59
+base_url:https://www.kenbiya.com/pp1/s/tokyo/n-1/ctk=292_300_311_299_293_302_307_298_294_301_310_314_295_303_308_313_304_306_309_312_296_305_297/max_page:154 
+df_shape:(0, 0)
+predicting done.
+end_time:2023-01-12 18:31:59.853700
+processing_time:0:00:00.770235
