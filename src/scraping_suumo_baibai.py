@@ -14,7 +14,7 @@ from retry import retry
 import sys
 
 work_dir = os.getcwd()
-with open(work_dir + '/setting/scraping_config.yaml', 'r') as yml:
+with open(work_dir + '/setting/suumo_scraping_config.yaml', 'r') as yml:
     config = yaml.safe_load(yml)
 area_name = sys.argv[1]
 if area_name == 'tokyo':
