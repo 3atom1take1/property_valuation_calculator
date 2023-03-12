@@ -1,0 +1,792 @@
+processing_start_time:2023-03-12 08:15:16
+base_url:https://www.kenbiya.com/pp1/s/tokyo/n-1/ctk=292_300_311_299_293_302_307_298_294_301_310_314_295_303_308_313_304_306_309_312_296_305_297/
+max_page:164 
+room_url:https://www.kenbiya.com//pp1/s/tokyo/chiyoda-ku/re_2973409scr/
+room_item:<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>3路線仕様可能!オーナーチェンジ物件（No.2973409scr）｜健美家</title>
+<meta content="タングラムが掲載する3路線仕様可能!オーナーチェンジ物件（No.2973409scr）の物件詳細ページです。不動産投資と収益物件の総合サイト健美家では、似た条件の物件や価格別、利回りが高い順、新着順などの条件で簡単に探せます。" name="description"/>
+<meta content="不動産投資,東京都,千代田区,3路線仕様可能!オーナーチェンジ物件,2973409scr,健美家,けんびや" name="keywords"/>
+<meta content="noarchive,index,follow" name="robots"/>
+<script>
+window.dataLayer = window.dataLayer || [];
+var ga_uid = ga_getUID();
+if (ga_uid.login == 1) {
+    dataLayer.push({'loginStatus' : 'Logged-in'});
+}
+else {
+    dataLayer.push({'loginStatus' : 'Not_Logged-in'});
+}
+dataLayer.push({'userId' : ga_uid.uid});
+
+function ga_getUID() {
+    var cookies = document.cookie;
+    var ret = {login: 0, uid: ''};
+    if( cookies != '' ) {
+        var c = cookies.split( '; ' );
+        for( var i=0; i<c.length; i++ ) {
+            var cookie = c[i].split( '=' );
+	    if (cookie[0] == 'K') {
+		ret.uid = cookie[1];
+	    }
+	    if (cookie[0] == 'X') {
+		if (cookie[1] != '') ret.login = 1;
+	    }
+        }
+    }
+    return ret;
+}
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MRDRBCT');</script>
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/" rel="index"/>
+<link href="/pp1/s/tokyo/chiyoda-ku/re_2973409scr/" rel="canonical"/>
+<link href="/css/m.css?1674002876" rel="stylesheet" type="text/css"/>
+<link href="/css/m_pp.css?1674004951" rel="stylesheet" type="text/css"/>
+<link href="/css/m2.css?1636502118" rel="stylesheet" type="text/css"/>
+<link href="/css/common/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="narrow" id="property_detail">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MRDRBCT" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div id="wrapper">
+<div id="container">
+<div data-version="1" id="box_bnr_top_fullwidth"><!-- バナーデザイン変更時にversion+1変える -->
+<link href="/css/main/nav_top_bnr.css" rel="stylesheet" type="text/css"/>
+<ul class="inner">
+<li><a href="/sl/"><img alt="完全無料の健美家の売却査定で、できるだけ速く・高く売却" src="/images/banner/bnr_top_fw_baikyaku_satei_a.jpg"/></a></li>
+</ul>
+<p id="btn_close_top_bnr"><a href="javascript:void(0);" onclick="closeHeaderTopBanner();"><span>×</span></a></p>
+</div>
+<div id="box_side_scrolling_btns">
+<ul>
+<li class="tryal"><a href="/info/agency.html"><img alt="収益物件掲載募集" src="/images/common/btn_side_tryal_put.png?200721"/></a></li>
+<li class="seminar"><a href="/info/service.html#service_02"><img alt="不動産投資セミナー掲載募集" src="/images/common/btn_side_seminar_put.png"/></a></li>
+</ul>
+</div>
+<script charset="UTF-8" src="/js-cookie/src/js.cookie.js"></script>
+<script>
+let banner_content = document.getElementById('box_bnr_top_fullwidth');
+let version = banner_content.dataset.version;
+if (Cookies.get('_hide_top_banner') && Cookies.get('_hide_top_banner') === version) {
+  closeHeaderTopBanner();
+}
+
+function closeHeaderTopBanner() {
+  Cookies.set('_hide_top_banner', version);
+  banner_content.remove();
+}
+</script>
+<div id="box_header">
+<header>
+<div class="left">
+<p class="head_statement">不動産投資と収益物件の情報サイト健美家</p>
+<p id="siteid"><a href="/"><img alt="不動産投資と収益物件の情報サイト健美家" src="/images/common/logo_kenbiya_rgb.svg"/></a></p>
+</div>
+<div class="right" id="now_regist">
+<div class="inner">
+<p><a href="/LP/">
+<img alt="「収益物件」を見つけるための情報とヒントがぎっしり！" src="/images/common/bnr_regist_member_home_pc.jpg"/>
+<img alt="「収益物件」を見つけるための情報とヒントがぎっしり！" src="/images/common/bnr_regist_member_pc.jpg"/>
+</a></p>
+</div>
+</div>
+</header>
+<nav>
+<ul id="nav_main">
+<li>
+<a href="/pp0/">
+<p><small>収益物件</small><br/>詳細検索</p>
+<p class="count"><small>47,699件</small></p>
+</a>
+</li><li>
+<a href="/sm/">
+<p><small>不動産投資</small><br/>セミナー</p>
+<p class="count"><small>162件</small></p>
+</a>
+</li><li>
+<a href="/ar/">
+<p><small>不動産投資</small><br/>コラム<span>・</span>ニュース</p>
+<p class="count"><small>9,619件</small></p>
+</a>
+</li><li>
+<a href="/blog/">
+<p><small>不動産投資</small><br/>ブログ</p>
+<p class="count"><small>1,020件</small></p>
+</a>
+</li><li>
+<a href="/sl/">
+<p><span>売却査定</span>を<br/><strong>全国<span class="num">74</span>社</strong>に依頼</p>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div id="headline">
+<ul>
+<li class="pr_l"><a href="/app/exe/mainTextPr?pr_id=236" rel="nofollow">【健美家パートナースクール】スクール生募集開始！</a></li>
+<li class="pr_r"><a href="/app/exe/mainTextPr?pr_id=229" rel="nofollow">プロが教える！初心者でもわかる投資判断大公開！</a></li>
+</ul>
+<ul id="btn_li">
+<li><a href="/app/exe/login?redirect=%2Fpp1%2Fs%2Ftokyo%2Fchiyoda-ku%2Fre_2973409scr%2F">会員ログイン</a></li>
+<li><a href="/info/agency.html">不動産会社の方へ</a></li>
+</ul>
+</div>
+<div id="breadcrumbs">
+<ul>
+<li><a href="/">不動産投資トップ</a></li>
+<li><a href="/pp1/">投資用マンション</a></li>
+<li><a href="/pp1/s/">首都圏</a></li>
+<li><a href="/pp1/s/tokyo/">東京都</a></li>
+<li><a href="/pp1/s/tokyo/chiyoda-ku/">千代田区</a></li>
+<li><strong>パレステュディオ神田EAST</strong></li>
+</ul>
+</div>
+<div id="wrapper_main">
+<div id="box_main">
+<div id="box_page_ttl">
+<div class="inner">
+<div class="inner_ttl">
+<h1>3路線仕様可能!オーナーチェンジ物件</h1>
+<h2 class="sub_ttl">
+<span class="cate_icon"><img alt="投資用マンション" src="/images/prop/cate_ONE.svg"/></span>
+<span>投資用マンションの詳細</span>
+<span class="new">New</span></h2>
+</div>
+<div class="inner_inquiry">
+<div class="box_inquiry">
+<p class="btn_inquiry_prop open_popup"><a href="javascript:void(0);" onclick="openInquiryProp();">この物件に資料請求</a></p>
+</div>
+<ul class="sub_info_fn">
+<li class="btn_add_favorite open_popup"><a href="javascript:void(0);" onclick="openAddFavorite('66eb720b-1e5c-43e7-bb16-43f4d09d3d7f');" rel="nofollow">この物件をお気に入りに追加</a></li>
+</ul>
+</div>
+</div>
+</div>
+<section id="property_detail_main">
+<div class="property" id="box_tbl_detail">
+<dl>
+<dt>価格</dt>
+<dd>
+<span>3,150</span>万円
+</dd>
+<dt>満室時利回り</dt>
+<dd><span>3<span>.88</span></span>％</dd>
+<dt>交通</dt>
+<dd>
+  JR総武本線 馬喰町駅 徒歩2分<br>
+  
+  JR山手線 神田駅 徒歩10分<br/>
+  
+  
+  都営新宿線 馬喰横山駅 徒歩3分<br/>
+</br></dd>
+<dt>満室時年収/月収</dt>
+<dd>122.4万円 / 10.2万円
+<p class="btn_view_glossary"><a href="javascript:void(0);">情報の見方</a></p></dd>
+<dt>住所</dt>
+<dd>
+東京都千代田区東神田1丁目
+</dd>
+<dt>物件名</dt>
+<dd><h2>パレステュディオ神田EAST</h2></dd>
+<dt>築年月</dt>
+<dd>
+2004年1月（築19年）
+</dd>
+<dt>土地権利</dt>
+<dd>
+所有権 </dd>
+<dt>建物構造/階数</dt>
+<dd>
+RC造6階/8階建</dd>
+<dt>管理費/修繕積立</dt>
+<dd>0円 / 13,800円</dd>
+<dt>専有面積</dt>
+<dd>
+23.25m²
+（バルコニー 0m²）</dd>
+<dt>管理会社</dt>
+<dd></dd>
+<dt>間取り</dt>
+<dd>
+1K </dd>
+<dt>管理方式/管理人</dt>
+<dd>
+  全部委託
+  
+    /
+    巡回
+  
+</dd>
+<dt>取引態様</dt>
+<dd>仲介</dd>
+<dt>情報公開日</dt>
+<dd>2023年 3月 12日</dd>
+<dt>引渡</dt>
+<dd>相談</dd>
+<dt>更新予定日</dt>
+<dd>2023年 6月 12日</dd>
+<dt>現況</dt>
+<dd>
+賃貸中</dd>
+<dt>管理ID</dt>
+<dd>2665687</dd>
+<dt>この物件の<br/>取扱不動産会社</dt>
+<dd>
+<div id="com_info_lite">
+<div class="left">
+<h3>タングラム</h3>
+<p class="authorized_num">東京都知事 (1) 第103399号</p>
+<p class="address">〒108-0073<br/>
+東京都港区三田2-11-1<br/>
+</p>
+</div>
+<div class="right">
+<p id="btn_com_info"><a href="javascript:void(0);">会社詳細を見る</a></p>
+<p id="btn_com_properties"><a href="/kaisha/tangram-re/">この不動産会社の収益物件一覧</a></p><p>
+<strong>営業時間</strong>：10:00～19:00<br/><strong>定休日</strong>：特になし<br/></p>
+<p class="phone">
+TEL：03-6400-3125<br/>
+FAX：03-6400-3129<br/></p>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div id="inner_inquiry">
+<ul class="sub_info_fn">
+<li class="btn_add_favorite open_popup"><a href="javascript:void(0);" onclick="openAddFavorite('66eb720b-1e5c-43e7-bb16-43f4d09d3d7f');" rel="nofollow">この物件をお気に入りに追加</a></li>
+</ul>
+<div class="box_inquiry">
+<p class="btn_inquiry_prop open_popup"><a href="javascript:void(0);" onclick="openInquiryProp();">この物件に資料請求する<span>（無料）</span></a></p>
+<p class="notice">＊収益物件の購入にあたっては、各物件掲載企業の説明を受け、ご自身でご判断いただきますようお願いします。</p>
+</div>
+<p class="btn_notif"><a href="/app/exe/notif1/2973409scr/">収益物件情報の修正・削除依頼はこちら</a></p>
+</div>
+<div id="box_property_sub_info">
+<div id="box_photo_gallery">
+<h3>物件画像ギャラリー</h3>
+<div class="inner">
+<div class="box_photo_large">
+<ul class="btn_prevnext">
+<li class="disable">prev</li>
+<li>next</li>
+</ul>
+<p class="counter"><span class="current">-</span>/<span class="total">-</span></p>
+<div id="p_large">
+<p id="photo_caption"></p>
+<img alt="3路線仕様可能!オーナーチェンジ物件（No.2973409scr)_画像1" class="img_no_caption" loading="lazy" src="/upload/p2973/2973409/1678608859929-1.jpg"/>
+</div>
+</div>
+<div id="box_photo_thumb">
+<ul>
+<li class="current"><img alt="3路線仕様可能!オーナーチェンジ物件（No.2973409scr)_画像1" class="img_no_caption" loading="lazy" src="/upload/p2973/2973409/1678608859929-1.jpg"/></li>
+<li><img alt="3路線仕様可能!オーナーチェンジ物件（No.2973409scr)_画像2" class="img_no_caption" loading="lazy" src="/upload/p2973/2973409/1678608859942-3.jpg"/></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="box_remark">
+<h3>備考</h3>
+<div class="inner">
+<div>[物件更新日]2023年3月12日</div>
+</div>
+</div>
+</div>
+<div id="inner_inquiry">
+<ul class="sub_info_fn">
+<li class="btn_add_favorite open_popup"><a href="javascript:void(0);" onclick="openAddFavorite('66eb720b-1e5c-43e7-bb16-43f4d09d3d7f');" rel="nofollow">この物件をお気に入りに追加</a></li>
+</ul>
+<div class="box_inquiry">
+<p class="btn_inquiry_prop open_popup"><a href="javascript:void(0);" onclick="openInquiryProp();">この物件に資料請求する<span>（無料）</span></a></p>
+<p class="notice">＊収益物件の購入にあたっては、各物件掲載企業の説明を受け、ご自身でご判断いただきますようお願いします。</p>
+</div>
+<p class="btn_notif"><a href="/app/exe/notif1/2973409scr/">収益物件情報の修正・削除依頼はこちら</a></p>
+</div>
+</section>
+<section id="pp_recommended">
+</section>
+<section id="support_contents">
+<div id="box_sub_contents">
+<ul>
+<li class="box_column">
+<div class="ttl_inner">
+<h2><a href="/ar/cl/">不動産投資コラム</a></h2>
+<span class="num">5,125話</span>
+</div>
+<div class="inner">
+<ul class="list">
+<li><a href="/ar/cl/jikenbo/46.html">
+<p class="photo"><img alt="渡辺よしゆき 46話_画像" loading="lazy" src="/clm/jikenbo/img/list_img.png"/></p>
+<h3>賃貸は都心に人戻り、売買は売れ残り増加。潮目が変わったコ...</h3>
+<p class="name">渡辺よしゆき 46話</p>
+</a></li>
+<li><a href="/ar/cl/mama/77.html">
+<p class="photo"><img alt="みっちーママ 77話_画像" loading="lazy" src="/clm/mama/img/list_img.png"/></p>
+<h3>確定申告でわからないことだらけだったので税理士さんに聞い...</h3>
+<p class="name">みっちーママ 77話</p>
+</a></li>
+<li><a href="/ar/cl/asizawa/53.html">
+<p class="photo"><img alt="芦沢晃 53話_画像" loading="lazy" src="/clm/asizawa/img/list_img.png"/></p>
+<h3>退去時は物件調査のチャンス！床下給排水管の建築竣工図と実...</h3>
+<p class="name">芦沢晃 53話</p>
+</a></li>
+<li><a href="/ar/cl/cashflow101/341.html">
+<p class="photo"><img alt="加藤ひろゆき 341話_画像" loading="lazy" src="/clm/cashflow101/img/list_img.png"/></p>
+<h3>不動産は、ニンゲンに貸すより、モノに貸せ。更地投資とテナ...</h3>
+<p class="name">加藤ひろゆき 341話</p>
+</a></li>
+<li><a href="/ar/cl/taidan/tc-208/211.html">
+<p class="photo"><img alt="大家対談 モトミ×アカサカトモコ_画像" loading="lazy" src="/clm/taidan/img/doc208_list.jpg"/></p>
+<h3>高値市場での新たな挑戦。不動産がくれた自由と目標を持たな...</h3>
+<p class="name">大家対談 モトミ×アカサカトモコ</p>
+</a></li>
+</ul>
+</div>
+</li>
+<li class="box_news">
+<div class="ttl_inner">
+<h2><a href="/ar/ns/">不動産投資ニュース</a></h2>
+<span class="num">4,494件</span>
+</div>
+<div class="inner">
+<ul class="list">
+<li>
+<a href="/ar/ns/release/p_event/6595.html">
+<p class="photo"><img alt="3/18(土)開催！賃貸オーナー向け無料オンラインセミナー「先人に学ぶ、空室対策しくじり事例解説」_画像" loading="lazy" src="/news_img/thumbs/6595/63041-thumb-20230312071001.png"/></p>
+<h3>3/18(土)開催！賃貸オーナー向け無料オンラインセミナー「先人に学ぶ、空室対策しく...</h3>
+</a></li>
+<li>
+<a href="/ar/ns/region/kyusyu/6589.html">
+<p class="photo"><img alt="西鉄グループが北九州で複合開発を推進。九州の穴場になるか_画像" loading="lazy" src="/news_img/thumbs/6589/62949-thumb-20230309071004.jpg"/></p>
+<h3>西鉄グループが北九州で複合開発を推進。九州の穴場になるか</h3>
+</a></li>
+<li>
+<a href="/ar/ns/jiji/investor/6571.html">
+<p class="photo"><img alt="子供4人の学費稼ぎに、不動産投資街道まっしぐら、『ワーママ投資家』のジョーさん_画像" loading="lazy" src="/news_img/thumbs/6571/62531-thumb-20230302164001.jpg"/></p>
+<h3>子供4人の学費稼ぎに、不動産投資街道まっしぐら、『ワーママ投資家』のジョーさん</h3>
+</a></li>
+<li>
+<a href="/ar/ns/release/p_service/6593.html">
+<p class="photo"><img alt="学区で住まいを探す不動産ポータル 「こどもいちばん」 リリース_画像" loading="lazy" src="/news_img/thumbs/6593/62960-thumb-20230309113002.jpg"/></p>
+<h3>学区で住まいを探す不動産ポータル 「こどもいちばん」 リリース</h3>
+</a></li>
+<li>
+<a href="/ar/ns/jiji/purchase_know_how/6580.html">
+<p class="photo"><img alt="2023年には1000億円超えの市場に?! いまワーケーションに求められること_画像" loading="lazy" src="/news_img/thumbs/6580/62822-thumb-20230307064002.jpg"/></p>
+<h3>2023年には1000億円超えの市場に?! いまワーケーションに求められること</h3>
+</a></li>
+</ul>
+</div>
+</li>
+<li class="box_blog">
+<div class="ttl_inner">
+<h2><a href="/blog/">不動産投資ブログ</a></h2>
+<span class="num">1,020記事</span>
+</div>
+<div class="inner">
+<ul class="list">
+<li><a href="/blog/c1=0/sakura/221746/">
+<p class="photo"><img alt="医師妻サクラ_画像" loading="lazy" src="/image/blog/m/1118.png"/></p>
+<h3>この３つを心がけるだけで、あなたも お金が貯まります(*...</h3>
+<p class="name">医師妻サクラ</p>
+</a></li>
+<li><a href="/blog/c1=1/noemin/221745/">
+<p class="photo"><img alt="のえみん_画像" loading="lazy" src="/image/blog/m/1006.png"/></p>
+<h3>Stable Diffusion（スマホの画像生成ＡＩ）...</h3>
+<p class="name">のえみん</p>
+</a></li>
+<li><a href="/blog/c1=2/m19670915/221744/">
+<p class="photo"><img alt="マサ_画像" loading="lazy" src="/image/blog/m/313.png"/></p>
+<h3>3月の稼働率</h3>
+<p class="name">マサ</p>
+</a></li>
+<li><a href="/blog/c1=0/toku/221743/">
+<p class="photo"><img alt="トク_画像" loading="lazy" src="/image/blog/m/1078.png"/></p>
+<h3>金融崩壊、そして人類解放へ！</h3>
+<p class="name">トク</p>
+</a></li>
+<li><a href="/blog/c1=1/uniblog/221741/">
+<p class="photo"><img alt="うに_画像" loading="lazy" src="/image/blog/m/873.png"/></p>
+<h3>北海道が地震の警戒すべきエリア？？</h3>
+<p class="name">うに</p>
+</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+<p id="btn_pagetop_float"><a href="javascript:void(0);">ページの<br>トップへ</br></a></p>
+<footer>
+<p class="btn_pagetop"><a href="javascript:void(0);" onclick="$('#btn_pagetop_float a').click();">不動産投資と収益物件の情報サイト健美家 ページのトップへ</a></p>
+<div id="nav_footer" role="navigation">
+<ul>
+<li class="category">
+<h4>収益物件を物件タイプから探す</h4>
+<ul>
+<li><a href="/pp1/">投資用マンション（区分）</a></li>
+<li><a href="/pp2/">一棟売りアパート</a></li>
+<li><a href="/pp3/">一棟売りマンション</a></li>
+<li><a href="/pp4/">一棟売りビル</a></li>
+<li><a href="/pp8/">戸建賃貸</a></li>
+<li><a href="/pp9/">賃貸併用住宅</a></li>
+<li><a href="/pp11/">店舗付き住宅</a></li>
+<li><a href="/pp6/">売り店舗・事務所</a></li>
+<li><a href="/pp7/">売り工場・倉庫</a></li>
+<li><a href="/pp10/">売りホテル・ペンション</a></li>
+<li><a href="/pp12/">駐車場</a></li>
+<li><a href="/pp5/">投資用土地・事業用土地</a></li>
+</ul>
+</li>
+<li class="pickup_area">
+<h4>注目の都市から探す</h4>
+<ul class="syutoken">
+<li><a href="/pp0/s/tokyo/">東京都</a></li>
+<li><a href="/pp0/s/kanagawa/">神奈川県</a></li>
+<li><a href="/pp0/s/chiba/">千葉県</a></li>
+<li><a href="/pp0/s/saitama/">埼玉県</a></li>
+<li><a href="/pp0/s/tokyo/shinjuku-ku/">新宿区</a></li>
+<li><a href="/pp0/s/tokyo/ota-ku/">大田区</a></li>
+<li><a href="/pp0/s/tokyo/suginami-ku/">杉並区</a></li>
+<li><a href="/pp0/s/tokyo/setagaya-ku/">世田谷区</a></li>
+<li><a href="/pp0/s/kanagawa/yokohama-shi/">横浜市</a></li>
+<li><a href="/pp0/s/kanagawa/kawasaki-shi/">川崎市</a></li>
+<li><a href="/pp0/s/saitama/saitama-shi/">さいたま市</a></li>
+<li><a href="/pp0/s/chiba/chiba-shi/">千葉市</a></li>
+</ul>
+<ul class="others">
+<li><a href="/pp0/k/osaka/">大阪府</a></li>
+<li><a href="/pp0/k/hyogo/">兵庫県</a></li>
+<li><a href="/pp0/k/kyoto/">京都府</a></li>
+<li><a href="/pp0/k/osaka/osaka-shi/">大阪市</a></li>
+<li><a href="/pp0/k/hyogo/kobe-shi/">神戸市</a></li>
+<li><a href="/pp0/k/kyoto/kyoto-shi/">京都市</a></li>
+<li><a href="/pp0/t/aichi/">愛知県</a></li>
+<li><a href="/pp0/f/fukuoka/">福岡県</a></li>
+<li><a href="/pp0/h/hokkaido/">北海道</a></li>
+<li><a href="/pp0/t/aichi/nagoya-shi/">名古屋市</a></li>
+<li><a href="/pp0/f/fukuoka/fukuoka-shi/">福岡市</a></li>
+<li><a href="/pp0/h/hokkaido/sapporo-shi/">札幌市</a></li>
+</ul>
+</li>
+<li class="regional">
+<h4>地域で探す</h4>
+<ul>
+<li><a href="/shutoken/">首都圏トップ</a></li>
+<li><a href="/kansai/">関西トップ</a></li>
+<li><a href="/toukai/">東海トップ</a></li>
+<li><a href="/kyusyu/">九州・沖縄トップ</a></li>
+<li><a href="/hokkaido/">北海道トップ</a></li>
+<li><a href="/touhoku/">東北トップ</a></li>
+<li><a href="/chushi/">中国・四国トップ</a></li>
+<li><a href="/shinhoku/">信州・北陸トップ</a></li>
+</ul>
+</li>
+<li class="lesson_sell">
+<h4>不動産投資を学ぶ</h4>
+<ul>
+<li><a href="/sm/">不動産投資セミナー</a></li>
+<li><a href="/ar/cl/">不動産投資コラム</a></li>
+<li><a href="/ar/ns/">不動産投資ニュース</a></li>
+<li><a href="/blog/">不動産投資ブログ</a></li>
+</ul>
+<h4>収益物件を売る</h4>
+<ul>
+<li><a href="/sl/">売却査定を依頼する</a></li>
+</ul>
+</li>
+<li class="order">
+<h4 class="pcv">資料請求</h4>
+<ul>
+<li><a href="/info/service.html">収益物件の掲載</a></li>
+<li><a href="/info/service.html#service_02">セミナー情報の掲載</a></li>
+<li><a href="/info/service.html#service_03">バナー、メルマガ等<br/>広告の掲載</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p class="notice">
+本サイト上のコンテンツ（不動産物件およびセミナー等の情報・画像・広告・デザイン等）に関する著作権、商標権その他の財産権は当社もしくは当該コンテンツを創作した著作者または著作権者に帰属しています。<br class="pcv"/>当社および権利者の許可無く本サイト上のコンテンツを複製・転載等のあらゆる利用または使用することを禁止します。
+</p>
+<ul id="com_utility">
+<li><a href="/info/privacy.html">個人情報</a></li>
+<li><a href="/app/exe/toiawase1?">問い合わせ</a></li>
+<li><a href="https://ameblo.jp/kenbiya" rel="noopener" target="_blank">広報室ブログ</a></li>
+<li><a href="/info/company.html">運営会社（健美家株式会社）</a></li>
+</ul>
+<p class="site_id"><a href="/"><img alt="不動産投資と収益物件の情報サイト健美家" src="/images/common/logo_kenbiya_rgb.svg"/></a></p>
+<p id="copyright"><small>Copyright © Kenbiya Co., Ltd. 2004-2023 All rights reserved.</small></p>
+</footer>
+</div>
+</div>
+<div id="bg_overlay"></div>
+<div id="layer_info">
+<div class="box_inner">
+<div class="layer_info_header">
+<h2>株式会社タングラム</h2>
+<p class="btn_open_comsite"><a href="https://tangram-re.co.jp/" rel="noopener" target="_blank">会社サイトへ</a></p>
+<p>健美家に収益物件を掲載いただいている 株式会社タングラム の会社概要になります。</p>
+</div>
+<section class="mCustomScrollbar" data-mcs-theme="rounded-dark" id="com_detail">
+<div class="box_basic_info">
+<h4>株式会社タングラム</h4>
+<p class="license">東京都知事 (1) 第103399号</p>
+<p>〒108-0073 東京都港区三田2-11-1 </p>
+<ul>
+<li>
+TEL: 03-6400-3125
+  FAX: 03-6400-3129</li>
+<li>URL: <a href="https://tangram-re.co.jp/" target="_blank">https://tangram-re.co.jp/</a></li><li>営業時間：10:00～19:00</li><li>定休日：特になし</li></ul>
+</div>
+</section>
+<section class="mCustomScrollbar" data-mcs-theme="rounded-dark" id="glossary_detail">
+<div class="box_outline">
+<h3>情報の見方について</h3>
+<p>健美家に掲載される収益物件（投資用マンション、一棟マンション、アパート、ビル、戸建賃貸、店舗、事務所、工場、倉庫、ホテル、駐車場、土地など）の物件情報の見方について解説いたします。</p>
+<dl>
+<dt>タイトル</dt>
+<dd><span class="new">New</span>マークは登録より1週間表示。</dd>
+<dt>価格</dt>
+<dd>単位は「万円」。消費税がかかる場合は、税込み価格を表示。<br/>［値下げ］ マークは価格変更1週間以内。</dd>
+<dt>満室時利回り</dt>
+<dd>「満室時利回り」 ＝「満室時年収」 ÷ 「物件購入価格」 × 100％ <br/>満室時年収（現時点で想定もしくは設定されている家賃収入を1年間得られた場合の収入で、公租公課その他当該物件を維持するために必要な費用の控除前のもの）を物件購入価格で割り、100％をかけたもの。表面利回りのこと。<br/>※ 現在の賃料、想定賃料を元に計算されているため、将来にわたって確実に得られることを保証するものではありません。</dd>
+<dt>満室時年収</dt>
+<dd>年間収入の合計金額を表示。家賃収入のほか共益費、管理費等も含まれる。<br/>※ 現在の賃料、想定賃料を元に計算されているため、将来にわたって確実に得られることを保証するものではありません。</dd>
+<dt>住所</dt>
+<dd>物件所在地の住所または地番を表示。<br/>物件により町名までの場合や末尾番号までの表示もある。</dd>
+<dt>交通</dt>
+<dd>最寄の沿線駅名及び駅までの徒歩分数または距離を表示。<br/>バス利用の場合は最寄駅からのバス乗車時間及び、停留所からの徒歩分数を表示。</dd>
+<dt>物件名</dt>
+<dd>物件に対して情報提供会社が付けた名称を表示。</dd>
+<dt>築年月</dt>
+<dd>建物が完成した年月を表示。新築の場合は新築マークを表示。</dd>
+<dt>建物構造/階数</dt>
+<dd>
+    建物の主となる構造、階建、総戸数を表示。区分所有物件は該当する階まで。<br/>
+    一棟売りアパート・一棟売りマンションでは総戸数に含まれる住戸以外（店舗・事務所など）の戸数を表示
+</dd>
+<dt>土地面積</dt>
+<dd>私道を除いた土地の面積を表示。<br>【 】 は坪数表示（1㎡＝0.3025坪、小数第3位以下は切り捨て）。<br/>別途私道がある場合はその負担面積（所有権または共有持分）を表示。</br></dd>
+<dt>土地権利</dt>
+<dd>敷地権利について表示。借地権の場合は期間と地代も表示。<br/>区分所有物件のみ備考に表示。</dd>
+<dt>専有面積</dt>
+<dd>区分所有物件の場合のみ表示。<br/>壁心面積での表示となるが、物件により登記簿面積（内法）で表示の場合もある。</dd>
+<dt>間取り</dt>
+<dd>部屋数及び間取りタイプ別の住戸数を表示。<br/>店舗、事務所の場合もある。駐車場があれば台数を表示。</dd>
+<dt>管理費/修繕積立</dt>
+<dd>区分所有物件のみ表示。毎月必要となる費用を表示。</dd>
+<dt>管理会社名/<br/>管理方式</dt>
+<dd>管理方式は全部委託、一部委託、自主管理のいずれかを表示。</dd>
+<dt>管理人</dt>
+<dd>管理人の勤務形態を表示。常駐、日勤、巡回、無、非常駐のいずれかを表示。<br/>区分所有物件の場合のみ表示。</dd>
+<dt>建物面積</dt>
+<dd>建物の延床面積を表示。<br>【 】 は坪数表示（1㎡＝0.3025坪、小数第3位以下は切り捨て）<br/></br></dd>
+<dt>最小面積/最大面積</dt>
+<dd>建物内の各住戸の最小面積及び最大面積を表示。<br/>一棟売りアパート・マンションの場合のみ表示。</dd>
+<dt>用途地域</dt>
+<dd>建築基準法で定められた建物の建築制限のこと。</dd>
+<dt>建ぺい率/容積率</dt>
+<dd>建ぺい率：土地面積に対する1階床面積の上限。<br>容積率　：土地面積に対する延べ床面積の上限（前面道路の幅員による制限もある）。</br></dd>
+<dt>接道状況</dt>
+<dd>敷地が接する道路の方角と幅員を表示。<br/>セットバックがある場合は必要事項も表示。</dd>
+<dt>防火/国土法</dt>
+<dd>防火　：防火指定地域であるかを防火地域、準防火地域、指定なしで表示。<br/>国土法：国土法届け出の要否を必要、不要で表示。</dd>
+<dt>取引態様</dt>
+<dd>売主、代理、仲介の3種類を表示。仲介、代理は売買契約価格に基づく手数料が必要。</dd>
+<dt>引渡</dt>
+<dd>即時、相談、または新築未完成の場合につき完成後と表示。</dd>
+<dt>現況</dt>
+<dd>賃貸中（満室）、賃貸中、空室、未完成、その他を表示。<br/>土地の場合は、更地、古家あり、駐車場、その他を表示。</dd>
+<dt>情報公開日</dt>
+<dd>物件を登録した日を表示。</dd>
+<dt>更新予定日</dt>
+<dd>次回の更新予定日を表示。</dd>
+<dt>管理ID</dt>
+<dd>物件に対して情報提供会社がIDをつけている場合に表示。</dd>
+<dt>取扱い不動産会社</dt>
+<dd>掲載物件の情報提供会社名及び免許番号、所在地、電話番号、FAX番号を表示。</dd>
+<dt>備考</dt>
+<dd>その他諸費用条件、制限事項などを表示。</dd>
+</dl>
+</div>
+</section>
+<p class="btn_close_layer"><a href="javascript:void(0);">閉じる</a></p>
+</div>
+</div>
+<script charset="UTF-8" src="/js/common/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script charset="UTF-8" src="/js/common/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+<script charset="UTF-8" src="/js/m.js?1628553797" type="text/javascript"></script>
+<script charset="UTF-8" src="/js/m_pp.js?1636506025" type="text/javascript"></script>
+<script charset="UTF-8" src="/js/main/com_scroll.js" type="text/javascript"></script>
+<script type="text/javascript">
+var recommendedAppeared = false;
+var ppcompAppeared = false;
+
+$(function(){
+  getPpRecommended();
+  $(window).scroll(function(){
+    getPpRecommended();
+  });
+  $(window).resize(function(){
+    getPpRecommended();
+  });
+});
+
+function getPpRecommended() {
+  if (!needGetRecommended()) {
+    return;
+  }
+  recommendedAppeared = true;
+  $.ajax({
+    url: "/app/exe/ajaxPpRecommended",
+    type:"POST",
+    dataType:"html",
+    data :{pf_id:"0OO2DqxshoJ6-",ct_id:"02KTQ3gc9zhC-",property_type_no:"02KTQ3gc9zhC-",price:"0Nq_fmsUoJ3y-",property_id:"0fBKLcDqM.EqcW_odwHLEvG--"},
+    success: function(data, dataType) {
+       $("#pp_recommended").html(data);
+       suggest_init("pp_recommended");
+    }
+  });
+}
+
+function needGetRecommended() {
+  if (recommendedAppeared) {
+    return false;
+  }
+  var scrollTop = $(window).scrollTop();
+  var areaTop = $("#pp_recommended").offset().top;
+  var viewportHeight = $(window).height();
+  if (scrollTop + viewportHeight >= areaTop) {
+    return true;
+  }
+  return false;
+}
+</script>
+<link href="/css/main/popup.css" rel="stylesheet" type="text/css"/>
+<div class="popup" id="regist_popup">
+<p class="btn_close"><a href="javascript:void(0);"></a></p>
+<div class="inner_content">
+<p>この物件に資料請求するには、<br class="spv"/>会員登録が必要です。</p>
+<p>お気に入りに追加するには、<br class="spv"/>会員登録が必要です。</p>
+</div>
+<p class="btn_submit"><a href="/app/exe/reg1" id="regist_popup_reg">会員登録する（無料）</a></p>
+<a href="/app/exe/login" id="regist_popup_login">ログインする</a>
+</div>
+<script type="text/javascript">
+$(function() {
+  /*
+  $(".open_popup").removeAttr("onclick");
+
+  $(".open_popup").on("click", function(){
+	$("body").append('<div class="bg_overlay"></div>');
+	$(".bg_overlay,#regist_popup").fadeIn("fast");
+  });
+
+  $(".btn_inquiry_prop.open_popup").on("click", function(){
+	$("#regist_popup .inner_content p:nth-child(1)").show();
+  });
+  $(".btn_add_favorite.open_popup").on("click", function(){
+	$("#regist_popup .inner_content p:nth-child(2)").show();
+});*/
+
+  $("#regist_popup .btn_close").on("click", function(){
+	$(this).parent().hide();
+	$(this).siblings(".inner_content").children("p").hide();
+	$(".bg_overlay").remove();
+  });
+
+});
+
+function openInquiryProp(){
+  let url="/app/exe/ask1?property_id=2973409scr";
+  openMemberRegistorDialog('ask', url);
+}
+
+function openAddFavorite(csrf){
+  let url="/app/exe/userFavReg?property_id=2973409scr";
+  openMemberRegistorDialog('fav', url);
+}
+
+function openMemberRegistorDialog(type, redirect) {
+  if (type == "fav") {
+    $("#regist_popup .inner_content p:nth-child(2)").show();
+  } else if (type == "ask") {
+    $("#regist_popup .inner_content p:nth-child(1)").show();
+  }
+
+  if (redirect) {
+    $("#regist_popup_reg").attr("href", "/app/exe/reg1?redirect=" + encodeURIComponent(redirect));
+    $("#regist_popup_login").attr("href", "/app/exe/login?redirect=" + encodeURIComponent(redirect));
+  }
+
+  $("body").append('<div class="bg_overlay"></div>');
+	$(".bg_overlay,#regist_popup").fadeIn("fast");
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement":
+ [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "item":
+   {
+    "@id": "https://www.kenbiya.com/",
+    "name": "不動産投資トップ"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "item":
+   {
+    "@id": "https://www.kenbiya.com/pp1/",
+    "name": "投資用マンション"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "item":
+   {
+    "@id": "https://www.kenbiya.com/pp1/s/",
+    "name": "首都圏"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "item":
+   {
+    "@id": "https://www.kenbiya.com/pp1/s/tokyo/",
+    "name": "東京都"
+   }
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "item":
+   {
+    "@id": "https://www.kenbiya.com/pp1/s/tokyo/chiyoda-ku/",
+    "name": "千代田区"
+   }
+  }
+ ]
+}
+</script>
+</body>
+</html>
+
