@@ -89,60 +89,67 @@ def extract_value(pattern,temp_property):
     match = re.search(pattern, temp_property)
     if match:
         return match.group(1)
-
-# for i in tqdm(range(max_page+1)): 
-for i in tqdm(range(2)): 
-    url = base_url.format(page = str(i))
-    # get html
-    item = get_html(url)
-    for j in item.findAll(href=re.compile("pp1/s/.*/re_.*/")):
-        room_url = 'https://www.kenbiya.com/'+j.get('href')
-        write_log(log_file,'room_url:'+room_url+'\n')
-        room_item = get_html(room_url)
-        write_log(log_file,'room_item:'+str(room_item)+'\n')
-        property_dict = {
-            'price': '価格',
-            'transportation': '交通',
-            'address': '住所',
-            'year_built': '築年月',
-            'building_structure': '建物構造/階数',
-            'exclusive_area': '専有面積',
-            'floor_plan': '間取り',
-            'transaction_method': '取引態様',
-            'delivery': '引渡',
-            'current_condition': '現況',
-            'cap_rate': '満室時利回り',
-            'full_occupancy_incom': '満室時年収/月収',
-            'property_name': '物件名',
-            'land_rights': '土地権利',
-            'management_fee_repair_reserve_fund': '管理費/修繕積立',
-            'management_company': '管理会社',
-            'management_method': '管理方式/管理人',
-            'last_update_date': '直前の更新日',
-            'scheduled_update_date': '更新予定日',
-            'management_id': '管理ID'
-        }
-        
-        for i, j in property_dict.items():
-            
+property_dict = {
+    'property_name': '物件名',
+    'price': '価格',
+    'transportation': '交通',
+    'address': '住所',
+    'year_built': '築年月',
+    'building_structure': '建物構造/階数',
+    'exclusive_area': '専有面積',
+    'floor_plan': '間取り',
+    'transaction_method': '取引態様',
+    'delivery': '引渡',
+    'current_condition': '現況',
+    'cap_rate': '満室時利回り',
+    'full_occupancy_incom': '満室時年収/月収',
+    'property_name': '物件名',
+    'land_rights': '土地権利',
+    'management_fee_repair_reserve_fund': '管理費/修繕積立',
+    'management_company': '管理会社',
+    'management_method': '管理方式/管理人',
+    'last_update_date': '直前の更新日',
+    'register_date': '情報公開日',
+    'scheduled_update_date': '更新予定日',
+    'management_id': '管理ID'
+}
+def main():
+    # for i in tqdm(range(max_page+1)): 
+    for i in tqdm(range(2)): 
+        all_data = []
+        url = base_url.format(page = str(i))
+        # get html
+        item = get_html(url)
+        for j in item.findAll(href=re.compile('/pp1/s/tokyo/.+/re')):
+            room_url = 'https://www.kenbiya.com/'+j.get('href')
+            write_log(log_file,'room_url:'+room_url+'\n')
+            room_item = get_html(room_url)
             temp_property_data={}
-            dt_tag = room_item.find('dt', text=j)
-            if dt_tag:
-                dd_tag = dt_tag.find_next('dd')
-                if dd_tag:
-                    temp_property_data[i] = dd_tag.text.strip()
-                else:
-                    temp_property_data[i] = ''
-            else:
-                temp_property_data[i] = ''
-        
+            for k, l in property_dict.items():
+                try:
+                    temp_property_data[k] = room_item.find('dt', text=l).find_next('dd').get_text()
+                except:
+                    temp_property_data[k] = ''
+            data = {}
             # 物件詳細のデータを収集
             # マンション名
-            write_log(log_file,'temp_property_data'+str(temp_property_data)+'\n')
             data["property_name"] = temp_property_data['property_name']
 
             # 価格
-            data["price"] = int(temp_property_data['price'].replace(',', '').replace('万円', '')) * 10000
+            pattern = r'\n(\d*)億'
+            try:
+                price_oku = int(extract_value(pattern,temp_property_data['price'])) * 100000000
+            except:
+                price_oku = 0
+            try:
+                price_man = int(temp_property_data['price'].replace(',', '').replace('万円', '')) * 10000
+            except:
+                try:
+                    pattern = r'\n*億(\d*)'
+                    price_man = int(extract_value(pattern,temp_property_data['price'].replace(',', '').replace('万円', ''))) * 10000
+                except:
+                    price_man = 0
+            data["price"] = price_oku + price_man
 
             # 交通
             data["train_line"] = temp_property_data['transportation'].split()[0]
@@ -157,11 +164,11 @@ for i in tqdm(range(2)):
             data["prefecture_name"] = extract_value(pattern,temp_address)
             pattern = r'^(.+(市|区))'
             data["city_name"] = extract_value(pattern,temp_address)
-            data["town_name"] = temp_address.replace(data["prefecture_name"],'').replace(data["city_name"],'')
+            data["town_name"] = temp_address.replace(str(data["prefecture_name"]),'').replace(str(data["city_name"]),'')
 
             # 築年数
             temp_year_built = temp_property_data['year_built']
-            pattern = r'（築(\d.+)年）'
+            pattern = r'築(\d*)年'
             data["year_built"] = int(extract_value(pattern,temp_year_built))
 
             # 構造
@@ -189,7 +196,10 @@ for i in tqdm(range(2)):
             data["floor_plan"] = temp_property_data['floor_plan'].split()[0]
 
             # 方角
-            data["direction"] = temp_property_data['floor_plan'].split()[1]
+            try:
+                data["direction"] = temp_property_data['floor_plan'].split()[1]
+            except:
+                data["direction"] = None
 
             # 取引態様
             data["transaction_method"] = temp_property_data['transaction_method']
@@ -201,10 +211,16 @@ for i in tqdm(range(2)):
             data["current_condition"] = temp_property_data['current_condition']
 
             # 満室時利回り
-            data["cap_rate"] = float(temp_property_data['cap_rate'].replace('％','')) / 100
+            try:
+                data["cap_rate"] = float(temp_property_data['cap_rate'].replace('％','')) / 100
+            except:
+                data["cap_rate"] = None
 
             # 満室時年収
-            data["full_occupancy_incom"] = int(float(temp_property_data['full_occupancy_incom'].split()[0].replace('万円','')) * 10000)
+            try:
+                data["full_occupancy_incom"] = int(float(temp_property_data['full_occupancy_incom'].split()[0].replace('万円','')) * 10000)
+            except:
+                data["full_occupancy_incom"] = None
 
             # 土地権利
             data["land_rights"] = temp_property_data['land_rights']
@@ -217,37 +233,45 @@ for i in tqdm(range(2)):
             data["management_company"] = temp_property_data['management_company']
 
             # 'management_method': '管理方式/管理人',
-            data["management_method"] = re.findall('(.*)\r\n  \r\n*', temp_property_data['management_method'].split('/')[0])[0]
-            data["management_person"] = re.findall('\r\n    (.*)', temp_property_data['management_method'].split('/')[1])[0]
-
+            # data["management_method"] = re.findall('(.*)\r\n  \r\n*', temp_property_data['management_method'].split('/')[0])[0]
+            # data["management_person"] = re.findall('\r\n    (.*)', temp_property_data['management_method'].split('/')[1])[0]
             # 直前の更新日
             date_format = '%Y年%m月%d日'
-            text = temp_property_data['last_update_date'].replace(' ','')
-            data["last_update_date"] = datetime.strptime(text, date_format).date()
-
+            try:
+                text = temp_property_data['last_update_date'].replace(' ','')
+                data["last_update_date"] = dt.datetime.strptime(text, date_format).date()
+            except:
+                text = temp_property_data['register_date'].replace(' ','')
+                data["last_update_date"] = dt.datetime.strptime(text, date_format).date()
 
             # 'scheduled_update_date': '更新予定日',
             text = temp_property_data['scheduled_update_date'].replace(' ','')
-            data["scheduled_update_date"] = datetime.strptime(text, date_format).date()
+            data["scheduled_update_date"] = dt.datetime.strptime(text, date_format).date()
 
             # 'management_id': '管理ID'
             data["management_id"] = temp_property_data['management_id']
+            
+            # room_url:URL
+            data["room_url"] = room_url
             write_log(log_file,'Done:'+data["property_name"])
             time.sleep(3)
-    # except:
-    #     time.sleep(3)
-    #     write_log(log_file,'error')
+            all_data.append(data)
+        # except:
+        #     time.sleep(3)
+        #     write_log(log_file,'error')
 
-    df = pd.DataFrame(data)
-    df.to_csv(work_dir+f'/scraping_raw/kenbiya_baibai_{excution_date}.csv',index = False)
-    
-text = 'df_shape:{}\n'.format(df.shape)
-write_log(log_file,text)
+        df = pd.DataFrame(all_data,index=None)
+        df.to_csv(work_dir+f'/scraping_raw/kenbiya_baibai_{excution_date}.csv',index = False)
+        
+    text = 'df_shape:{}\n'.format(df.shape)
+    write_log(log_file,text)
 
-end_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
-text = 'predicting done.\nend_time:{}\n'.format(end_time)
-write_log(log_file,text)
+    end_time = dt.datetime.now() + dt.timedelta(hours=diff_jst_from_utc)
+    text = 'predicting done.\nend_time:{}\n'.format(end_time)
+    write_log(log_file,text)
 
-processing_time = end_time - start_time
-text = 'processing_time:{}\n'.format(processing_time)
-write_log(log_file,text)
+    processing_time = end_time - start_time
+    text = 'processing_time:{}\n'.format(processing_time)
+    write_log(log_file,text)
+if __name__ == '__main__':
+    main()
