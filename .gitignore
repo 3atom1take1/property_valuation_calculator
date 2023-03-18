@@ -2,5 +2,6 @@
 scraping_raw/
 train_data/
 log/
+.ipynb_checkpoints
 *.out
 *.ipynb
