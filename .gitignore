@@ -1,5 +1,6 @@
 *.csv
 scraping_raw/
 train_data/
+log/
 *.out
 *.ipynb
