@@ -4,3 +4,5 @@ base_url_tokyo: 'https://www.kenbiya.com/pp1/s/tokyo/n-{page}/ctk=292_300_311_29
 # base_url_osaka: "https://www.rakumachi.jp/syuuekibukken/area/prefecture/dimAll/?page={page}&pref=27&gross_from=&price_to=&dim[]=2001&sort=property_created_at&sort_type=desc"
 
 # base_url_fukuoka: "https://www.rakumachi.jp/syuuekibukken/area/prefecture/dimAll/?page={page}&pref=40&gross_from=&price_to=&dim[]=2001&sort=property_created_at&sort_type=desc"
+
+base_url_apartment: 'https://www.kenbiya.com/pp2_3/s/'

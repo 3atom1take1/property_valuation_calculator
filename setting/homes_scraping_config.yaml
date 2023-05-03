@@ -1,0 +1,7 @@
+base_url_ibaraki: 'https://toushi.homes.co.jp/bukkensearch/addr11=8&tbg[]=2/?page={page}'
+base_url_tochigi: 'https://toushi.homes.co.jp/bukkensearch/addr11=9&tbg[]=2/?page={page}'
+base_url_gunma: 'https://toushi.homes.co.jp/bukkensearch/addr11=10&tbg[]=2/?page={page}'
+base_url_saitama: 'https://toushi.homes.co.jp/bukkensearch/addr11=11&tbg[]=2/?page={page}'
+base_url_chiba: 'https://toushi.homes.co.jp/bukkensearch/addr11=12&tbg[]=2/?page={page}'
+base_url_tokyo: 'https://toushi.homes.co.jp/bukkensearch/addr11=11&tbg[]=2/?page={page}'
+base_url_kanagawa: 'https://toushi.homes.co.jp/bukkensearch/addr11=11&tbg[]=2/?page={page}'
